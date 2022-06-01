@@ -47,7 +47,7 @@ const ForgotPasswordAuth = () => {
           <h1>Forgot your password?</h1>
           <Input type="password" label="Password" register={register} errors={errors.password} />
           <Input type="password" label="Password Confirm" register={register} errors={errors.passwordConfirm} />
-          <Input type="submit" value="Set New Password" className="ui button form-element" />
+          <input type="submit" value="Set New Password" className="ui button form-element" />
           {serverErrors && <p>{serverErrors}</p>}
         </form>
       )}

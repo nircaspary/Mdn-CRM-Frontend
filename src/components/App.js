@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 import { ProtectedRoute } from '../models/ProtectedRoutes';
 import Navbar from './Navbar';
-import Form from './Form';
+import FaultForm from './FaultForm';
 import ForgotPasswordAuth from './ForgotPasswordAuth';
 import ForgotPassword from './ForgotPassword';
 import ChangePassword from './ChangePassword';
@@ -24,7 +24,7 @@ const App = () => {
       <Route path="/" component={Navbar} />
       <div className="ui form-container">
         <Switch>
-          <Route exact path="/" component={Form} />
+          <Route exact path="/" component={FaultForm} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/login/forgot-password/auth/:id" component={ForgotPasswordAuth} />
           <Route exact path="/login/forgot-password" component={ForgotPassword} />

@@ -8,6 +8,7 @@ const Location = ({ passLocation, userLocation }) => {
   const [roomNumber, setRoomNumber] = useState(userLocation.roomNumber || 1);
 
   useEffect(() => passLocation({ building, floor, roomNumber }), [building, floor, roomNumber]);
+  useEffect(() => setRoomNumber(roomNumbers(floor)[0]), [floor]);
 
   return (
     <>

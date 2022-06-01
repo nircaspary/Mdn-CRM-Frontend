@@ -2,9 +2,17 @@ import React from 'react';
 import { removeSpaces } from '../../helpers/removeSpaces';
 
 const Input = ({ label, register, errors, ...rest }) => {
+  const instractions = {
+    id: '(9 Numbers)',
+    cellPhone: '(10 Numbers)',
+    officePhone: '(7 Numbers)',
+    computerName: '(5 Numbers)',
+  };
   return (
     <div className="field form-element">
-      <label>{label}</label>
+      <label>
+        {label} <span style={{ color: '#B0A8A1' }}>{instractions[removeSpaces(label)]}</span>
+      </label>
       {register ? (
         <>
           {rest.type === 'textarea' ? (

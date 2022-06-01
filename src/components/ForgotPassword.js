@@ -42,7 +42,7 @@ const ForgotPassword = () => {
         <form className="ui form login-form" autoComplete="off" noValidate onSubmit={handleSubmit(onSubmit)}>
           <h1>Forgot your password?</h1>
           <p style={{ textAlign: 'center' }}>please enter your email address for validation</p>
-          <Input placeholder="ex: user@gmail.com" register={register} label="email" errors={errors.email} />
+          <Input placeholder="ex: user@gmail.com" register={register} label="Email" errors={errors.email} />
           <input type="submit" value="Get verification code" className="ui button form-element" />
           {serverErrors && <p style={{ color: 'red' }}>{serverErrors}</p>}
         </form>

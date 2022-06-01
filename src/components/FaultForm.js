@@ -10,7 +10,7 @@ import * as Http from '../models/Http';
 import 'react-toastify/dist/ReactToastify.css';
 import './css/form.css';
 
-const Form = () => {
+const FaultForm = () => {
   const {
     register,
     handleSubmit,
@@ -89,7 +89,7 @@ const Form = () => {
               <Input label="First Name" register={register} errors={errors.firstName} />
               <Input label="Last Name" register={register} errors={errors.lastName} />
             </div>
-            <Input label="Email" register={register} errors={errors.email} />
+            <Input label="Email" inst="email" register={register} errors={errors.email} />
             <div className="two fields">
               <Input label="Cell Phone" register={register} errors={errors.cellPhone} />
               <Input label="Office Phone" register={register} errors={errors.officePhone} />
@@ -111,4 +111,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FaultForm;
